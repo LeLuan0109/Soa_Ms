@@ -1,0 +1,64 @@
+<configuration>
+    <property name="LOG_FILE" value="da_app/src/main/resources/logs/application.log" />
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_FILE}</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
+
+<!--<configuration>-->
+<!--    <property name="LOG_FILE" value="da_app/src/main/resources/logs/application.log" />-->
+
+<!--    &lt;!&ndash; File Appender &ndash;&gt;-->
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>${LOG_FILE}</file>-->
+<!--        <encoder>-->
+<!--            &lt;!&ndash; Thêm requestId vào log output &ndash;&gt;-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{requestid}] %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Console Appender &ndash;&gt;-->
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            &lt;!&ndash; Thêm requestId vào log output &ndash;&gt;-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{requestid}] %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Loggers Configuration &ndash;&gt;-->
+<!--    <logger name="com.project.app" level="debug">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+
+<!--    &lt;!&ndash; Root Logger Configuration &ndash;&gt;-->
+<!--    <root level="info">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </root>-->
+
+<!--    &lt;!&ndash; Error logging &ndash;&gt;-->
+<!--    <logger name="org.springframework" level="warn">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+
+<!--    &lt;!&ndash; Hikari DataSource Logs &ndash;&gt;-->
+<!--    <logger name="com.zaxxer.hikari" level="info">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+
+<!--</configuration>-->

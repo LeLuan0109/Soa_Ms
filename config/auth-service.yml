@@ -1,0 +1,15 @@
+api:
+  prefix: /api/v1
+
+jwt:
+  expiration: 604800
+  expirationForgotPass: 1800
+  secretKey: ${JWT_SECRET_KEY:TaqlmGv1iEDMRiFp/pHuID1+T84IABfuA0xXh4GhiUI=}
+  secretKeyForgotPass: ${JWT_SECRET_KEY_FORGOT_PASS:f8CIClniZGjCgXh5kCRwdb9HMoG//Jlg+tfqSXIJU4k=}
+
+spring:
+  devtools:
+    restart:
+      enabled: false
+
+

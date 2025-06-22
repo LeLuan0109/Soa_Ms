@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="auth-service" value="business-service (1)" />
+        <entry key="business-service" value="config-server (1) (com.da)" />
+        <entry key="config-system-service" value="app-corp-debt-admin" />
+        <entry key="org-service" value="job-service" />
+        <entry key="user-service" value="business-service (1)" />
+      </map>
+    </option>
+  </component>
+</project>
